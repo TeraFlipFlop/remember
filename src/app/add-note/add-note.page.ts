@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NoteServiceService } from '../note-service.service';
 
 @Component({
   selector: 'app-add-note',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddNotePage implements OnInit {
 
-  constructor() { }
+  constructor(private noteService: NoteServiceService ) { }
 
-  ngOnInit() {
+  saveNote(value:{title: string}){
+this.noteService.saveNote(value);
+
+
   }
 
 }
