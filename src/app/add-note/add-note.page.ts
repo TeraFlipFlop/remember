@@ -9,6 +9,9 @@ import { NoteServiceService } from '../note-service.service';
 export class AddNotePage implements OnInit {
 
   constructor(private noteService: NoteServiceService ) { }
+  ngOnInit(): void {
+   
+  }
 
   saveNote(value:{title: string}){
 this.noteService.saveNote(value);
